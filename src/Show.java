@@ -19,12 +19,12 @@ public class Show{
     public void printActorList(){
         for (Actor actor : listOfActors){
             System.out.println(actor.getName() + " " + actor.getSurname()
-                    + "(" + actor.getHeight() + ")");
+                    + " (" + actor.getHeight() + ")");
         }
     }
 
     public void addNewActor(Actor actor){
-        if(listOfActors.contains(actor)){
+        if(!listOfActors.contains(actor)){
             listOfActors.add(actor);
         } else System.out.println("Такой актер уже есть");
     }
@@ -37,6 +37,6 @@ public class Show{
                 return;
             }
         }
-        System.out.printl("Актер с такой фамилей отсуствует");
+        System.out.println("Актер с такой фамилей отсуствует");
     }
 }
