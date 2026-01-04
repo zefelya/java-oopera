@@ -1,13 +1,16 @@
+import java.util.Objects;
+
 public class Actor extends Person {
 
-    private double height;
+    private int height;
 
-    public double getHeight() {
-        return height;
-    }
-    public Actor(String name, String surname, double height){
+    public Actor(String name, String surname, int height) {
         super(name, surname);
         this.height = height;
+    }
+
+    public int getHeight() {
+        return height;
     }
 
     @Override
@@ -15,11 +18,11 @@ public class Actor extends Person {
         if (object == null || getClass() != object.getClass()) return false;
         if (!super.equals(object)) return false;
         Actor actor = (Actor) object;
-        return java.lang.Double.compare(height, actor.height) == 0;
+        return height == actor.height;
     }
 
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(super.hashCode(), height);
+        return Objects.hash(super.hashCode(), height);
     }
 }

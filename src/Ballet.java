@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Ballet extends MusicalShow{
+public class Ballet extends MusicalShow {
 
     private Person choreographer;
 
